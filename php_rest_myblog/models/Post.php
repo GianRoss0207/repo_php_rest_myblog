@@ -1,5 +1,4 @@
 <?php
-
   define('QUERY_SELECTION',
     'SELECT 
       c.name as category_name, 
@@ -60,14 +59,14 @@
           LEFT JOIN
             categories c ON p.category_id = c.id 
           WHERE
-            p.id = ?
+            p.id = :id
           LIMIT 0,1 ';
       
       // Prepare statements
       $stmt = $this->conn->prepare($query);
 
       //Bind ID
-      $stmt->bindParam(1, $this->id);
+      $stmt->bindParam(":id", $this->id);
 
       // Execute query
       $stmt->execute();
@@ -189,5 +188,3 @@
       return false;
     }
   }
-  
- ?>

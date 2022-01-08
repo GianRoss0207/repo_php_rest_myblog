@@ -9,4 +9,3 @@
 
     // Instatiate blog post object
     $post = new Post($db);
-?>

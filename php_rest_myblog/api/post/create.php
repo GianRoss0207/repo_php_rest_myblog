@@ -27,6 +27,3 @@
         array('message' => 'Post Not Created')
     );
   }
-
-
-

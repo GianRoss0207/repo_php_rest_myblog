@@ -8,7 +8,7 @@
 
   // init Database and Post obj
   require_once('init.php');
-  
+
   // Get raw posted data
   $data = json_decode(file_get_contents('php://input'));
 
@@ -30,6 +30,3 @@
         array('message' => 'Post Not Updated')
     );
   }
-
-
-
