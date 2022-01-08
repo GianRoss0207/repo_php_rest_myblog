@@ -6,15 +6,8 @@
   header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,'.
     'Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
-  require_once('../../config/Database.php');
-  require_once('../../models/Post.php');
-
-  // Instatiate DB & connect
-  $database = new Database();
-  $db = $database->connect();
-
-  // Instatiate blog post object
-  $post = new Post($db);
+  // init Database and Post obj
+  require_once('init.php');
   
   // Get raw posted data
   $data = json_decode(file_get_contents('php://input'));

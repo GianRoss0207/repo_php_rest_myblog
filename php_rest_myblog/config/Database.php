@@ -1,7 +1,6 @@
 <?php
-  
-  $json = file_get_contents(__DIR__ . '/db_params.json');
-  define('DB_PARAMS', json_decode($json, true));
+  define('DB_PARAMS', json_decode(file_get_contents(
+      __DIR__ . '/db_params.json'), true));
 
   class Database{
     //DB params
